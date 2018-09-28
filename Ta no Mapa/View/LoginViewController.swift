@@ -52,7 +52,7 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
                 }
             } else {
                 performUIUpdatesOnMain {
-                    //self.debugTextLabel.text = ""
+                   
                     let controller = self.storyboard!.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
                     self.present(controller, animated: true, completion: nil)
                 }
