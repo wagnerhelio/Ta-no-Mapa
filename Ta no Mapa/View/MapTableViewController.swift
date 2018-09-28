@@ -28,10 +28,10 @@ class MapTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCell(withIdentifier: "Cell")!
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "Cell")as! MapTableViewCell
         let student : UdacityStudentInformation = studentModel.Students[(indexPath as NSIndexPath).row]
-        cell.textLabel!.text = student.FirstName
-        cell.detailTextLabel!.text = student.MediaURL
+        cell.fullName.text = student.FirstName
+        cell.mediaURL.text = student.MediaURL
         
         return cell
     }
