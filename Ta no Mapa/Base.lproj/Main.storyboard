@@ -69,6 +69,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <state key="normal" title="Sing Up"/>
+                                <connections>
+                                    <action selector="btnSingin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y2G-N7-1Yo"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ta no Mapa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Osu-yo-xdR">
                                 <rect key="frame" x="116" y="118" width="89" height="21"/>
@@ -107,6 +110,7 @@
                     <connections>
                         <outlet property="UdacityImage" destination="iKU-M0-zBa" id="OrF-9L-Xw6"/>
                         <outlet property="btnLogin" destination="HOR-3n-N40" id="e2s-QC-NXR"/>
+                        <outlet property="btnSingIn" destination="dOP-VT-68F" id="nfT-Gb-rws"/>
                         <outlet property="tfEmail" destination="z5h-QM-mg1" id="mNa-ts-Y7M"/>
                         <outlet property="tfPassword" destination="RrP-u1-Mea" id="fdJ-Ye-urW"/>
                     </connections>
@@ -124,33 +128,49 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="58" id="bSr-gt-dsV">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="58" id="bSr-gt-dsV" customClass="MapTableViewCell" customModule="Ta_no_Mapa" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="320" height="58"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bSr-gt-dsV" id="7F2-N2-vMb">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="57.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Titlo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eog-5j-K51">
-                                            <rect key="frame" x="61" y="9" width="44" height="26"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wagner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eog-5j-K51">
+                                            <rect key="frame" x="61" y="9" width="68" height="26"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Detalhe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NvE-VL-svo">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detalhe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NvE-VL-svo">
                                             <rect key="frame" x="64" y="32" width="44" height="15"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_pin" translatesAutoresizingMaskIntoConstraints="NO" id="d0b-bv-zVs">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_pin" translatesAutoresizingMaskIntoConstraints="NO" id="d0b-bv-zVs">
                                             <rect key="frame" x="16" y="9" width="37" height="38"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="38" id="M2t-iv-Fc6"/>
+                                                <constraint firstAttribute="width" constant="37" id="nnm-C3-QdZ"/>
+                                            </constraints>
                                         </imageView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="NvE-VL-svo" firstAttribute="leading" secondItem="d0b-bv-zVs" secondAttribute="trailing" constant="11" id="9mj-Cf-vOf"/>
+                                        <constraint firstItem="eog-5j-K51" firstAttribute="top" secondItem="7F2-N2-vMb" secondAttribute="top" constant="9" id="KSd-bt-Hl1"/>
+                                        <constraint firstItem="d0b-bv-zVs" firstAttribute="top" secondItem="7F2-N2-vMb" secondAttribute="top" constant="9" id="Uiz-Zx-HUI"/>
+                                        <constraint firstItem="d0b-bv-zVs" firstAttribute="leading" secondItem="7F2-N2-vMb" secondAttribute="leading" constant="16" id="W6T-6x-pRs"/>
+                                        <constraint firstItem="NvE-VL-svo" firstAttribute="bottom" secondItem="d0b-bv-zVs" secondAttribute="bottom" id="Z8g-gY-xFG"/>
+                                        <constraint firstItem="eog-5j-K51" firstAttribute="leading" secondItem="d0b-bv-zVs" secondAttribute="trailing" constant="8" id="gfy-yM-Jmu"/>
+                                        <constraint firstItem="eog-5j-K51" firstAttribute="leading" secondItem="d0b-bv-zVs" secondAttribute="trailing" constant="8" id="m5U-Ys-Ewm"/>
+                                        <constraint firstAttribute="bottom" secondItem="eog-5j-K51" secondAttribute="bottom" constant="22.5" id="tfk-3w-P8h"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="fullName" destination="eog-5j-K51" id="r9R-Oh-6Jq"/>
+                                    <outlet property="mediaURL" destination="NvE-VL-svo" id="jBp-RC-tM7"/>
+                                    <outlet property="pinImage" destination="d0b-bv-zVs" id="8rI-X7-qPw"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

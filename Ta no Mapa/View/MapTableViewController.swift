@@ -24,20 +24,19 @@ class MapTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return studentModel.Students.count
+        return 1
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "Cell")!
-        let student = studentModel.Students[(indexPath as NSIndexPath).row]
+        let student : UdacityStudentInformation = studentModel.Students[(indexPath as NSIndexPath).row]
         cell.textLabel!.text = student.FirstName
         cell.detailTextLabel!.text = student.MediaURL
+        
         return cell
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return studentModel.Students.count
     }
     override func viewDidAppear(_ animated: Bool) {

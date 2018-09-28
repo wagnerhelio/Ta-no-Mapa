@@ -14,7 +14,8 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet var tfEmail: UITextField!
     @IBOutlet var tfPassword: UITextField!
     @IBOutlet var btnLogin: UIButton!
-//
+    @IBOutlet var btnSingIn: UIButton!
+    
     var studentModel : UdacityStudentModel {
         let object = UIApplication.shared.delegate
         let appDelegate = object as! AppDelegate
@@ -90,6 +91,11 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         
     }
     
+    @IBAction func btnSingin(_ sender: Any) {
+        if let signUpURL = URL(string: UdacityClient.signUpURL), UIApplication.shared.canOpenURL(signUpURL) {
+            UIApplication.shared.open(signUpURL)
+        }
+    }
     
 
 }
