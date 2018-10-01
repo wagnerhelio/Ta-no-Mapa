@@ -7,6 +7,8 @@
 //
 
 import Foundation
+class UdacityNetworkFunctions: NSObject {
+
 // Authentication in Udacity
 func UdacityAuthentication (completionHandler: @escaping (_ success: Bool, _ error: String?) -> Void)  {
     
@@ -93,7 +95,7 @@ func DeleteSession (){
     
 }
 
-func GetStudents(completionHandler: @escaping (_ result: [[String:AnyObject]]?, _ error: String?) -> Void) {
+func getStudents(completionHandler: @escaping (_ result: [[String:AnyObject]]?, _ error: String?) -> Void) {
     var request = URLRequest(url: URL(string: "https://parse.udacity.com/parse/classes/StudentLocation?limit=100&order=-updatedAt")!)
     request.addValue("QrX47CA9cyuGewLdsL7o5Eb8iug6Em8ye0dnAbIr", forHTTPHeaderField: "X-Parse-Application-Id")
     request.addValue("QuWThTdiRmTux3YaDseUSEpUKo7aBYM737yKd4gY", forHTTPHeaderField: "X-Parse-REST-API-Key")
@@ -169,4 +171,5 @@ func PostNewStudentLocation(student: UdacityStudentInformation, completionHandle
     }
     task.resume()
     
+    }
 }

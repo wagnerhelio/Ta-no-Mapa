@@ -19,6 +19,7 @@ class MapTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+          
     }
 
     // MARK: - Table view data source
@@ -61,8 +62,9 @@ class MapTableViewController: UITableViewController {
     @IBAction func btnLogout(_ sender: Any) {
         DeleteSession()
         performUIUpdatesOnMain {
-            let controller = self.storyboard!.instantiateViewController(withIdentifier: "LoginViewController")
-            self.present(controller, animated: true, completion: nil)
+            //let controller = self.storyboard!.instantiateViewController(withIdentifier: "LoginViewController")
+            //self.present(controller, animated: true, completion: nil)
+            self.dismiss(animated: true, completion: nil)
         }
     }
     

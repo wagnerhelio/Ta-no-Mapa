@@ -25,6 +25,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        mapView.delegate = self
     }
     override func viewWillAppear(_ animated: Bool) {
         createAnnotations()
@@ -112,8 +113,11 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     @IBAction func btnLogout(_ sender: Any) {
         DeleteSession()
         performUIUpdatesOnMain {
-            let controller = self.storyboard!.instantiateViewController(withIdentifier: "LoginViewController")
-            self.present(controller, animated: true, completion: nil)
+            //let controller = self.storyboard!.instantiateViewController(withIdentifier: "LoginViewController")
+            //self.present(controller, animated: true, completion: nil)
+            self.dismiss(animated: true, completion: nil)
+            
+
         }
     }
 }
