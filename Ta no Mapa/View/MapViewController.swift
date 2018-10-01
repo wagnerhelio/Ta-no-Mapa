@@ -23,6 +23,8 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         return appDelegate.studentModel
     }
     
+    let  networkManager = UdacityNetworkFunctions()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
@@ -111,7 +113,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     }
     
     @IBAction func btnLogout(_ sender: Any) {
-        DeleteSession()
+        networkManager.DeleteSession()
         performUIUpdatesOnMain {
             //let controller = self.storyboard!.instantiateViewController(withIdentifier: "LoginViewController")
             //self.present(controller, animated: true, completion: nil)

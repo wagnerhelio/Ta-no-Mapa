@@ -9,9 +9,10 @@
 import Foundation
 class UdacityStudentModel {
     var Students = [UdacityStudentInformation]()
+    let  networkManager = UdacityNetworkFunctions()
     
     func LoadStudents (completionHandler: @escaping (_ error: String?) -> Void) {
-        GetStudents { (results, error) in
+        networkManager.getStudents { (results, error) in
             if (error != nil) {
                 completionHandler(error)
             } else {

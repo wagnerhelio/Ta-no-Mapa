@@ -17,6 +17,8 @@ class SaveLocationMapViewController: UIViewController, MKMapViewDelegate {
     
     var student:UdacityStudentInformation?
     
+    let  networkManager = UdacityNetworkFunctions()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -50,7 +52,7 @@ class SaveLocationMapViewController: UIViewController, MKMapViewDelegate {
         view.addSubview(activityIndicator)
         
         activityIndicator.startAnimating()
-        PostNewStudentLocation(student:student!) { (success, error) in
+        networkManager.PostNewStudentLocation(student:student!) { (success, error) in
             performUIUpdatesOnMain {
                 self.activityIndicator.stopAnimating()
             }

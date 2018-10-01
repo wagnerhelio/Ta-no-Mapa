@@ -85,10 +85,12 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
                 self.completeLogin()
             } else {
                 
-                self.displayError("Invalid Email or Password please try again")
+                self.displayError(error ?? "")
             }
             }
         }
+        tfEmail.text = ""
+        tfPassword.text = ""
     }
     
     @IBAction func btnSingin(_ sender: Any) {

@@ -23,7 +23,6 @@
 		38602E69215D402D005863E4 /* CreateLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38602E68215D402D005863E4 /* CreateLocationViewController.swift */; };
 		38602E6B215D4069005863E4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38602E6A215D4069005863E4 /* MapViewController.swift */; };
 		38602E6D215D4099005863E4 /* MapTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38602E6C215D4099005863E4 /* MapTableViewController.swift */; };
-		38602E70215D7A37005863E4 /* ErrorTratament.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38602E6F215D7A37005863E4 /* ErrorTratament.swift */; };
 		38D91E3A215E588000690C27 /* UdacityClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D91E39215E588000690C27 /* UdacityClient.swift */; };
 		38D91E3C215E5E6F00690C27 /* MapTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D91E3B215E5E6F00690C27 /* MapTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -50,7 +49,6 @@
 		38602E68215D402D005863E4 /* CreateLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateLocationViewController.swift; sourceTree = "<group>"; };
 		38602E6A215D4069005863E4 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		38602E6C215D4099005863E4 /* MapTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTableViewController.swift; sourceTree = "<group>"; };
-		38602E6F215D7A37005863E4 /* ErrorTratament.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTratament.swift; sourceTree = "<group>"; };
 		38D91E39215E588000690C27 /* UdacityClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdacityClient.swift; sourceTree = "<group>"; };
 		38D91E3B215E5E6F00690C27 /* MapTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -139,7 +137,6 @@
 			isa = PBXGroup;
 			children = (
 				38602E63215D2125005863E4 /* GCDBlackBox.swift */,
-				38602E6F215D7A37005863E4 /* ErrorTratament.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -216,7 +213,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				38602E5D215D0B17005863E4 /* UdacityStudentInformation.swift in Sources */,
-				38602E70215D7A37005863E4 /* ErrorTratament.swift in Sources */,
 				38D91E3C215E5E6F00690C27 /* MapTableViewCell.swift in Sources */,
 				382152222147F08700FBA63A /* ViewController.swift in Sources */,
 				38602E59215D09B4005863E4 /* UdacityConstants.swift in Sources */,

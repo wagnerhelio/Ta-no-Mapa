@@ -16,6 +16,7 @@ class MapTableViewController: UITableViewController {
         let appDelegate = object as! AppDelegate
         return appDelegate.studentModel
     }
+    let  networkManager = UdacityNetworkFunctions()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,12 +61,13 @@ class MapTableViewController: UITableViewController {
     }
 
     @IBAction func btnLogout(_ sender: Any) {
-        DeleteSession()
-        performUIUpdatesOnMain {
+        
+        networkManager.DeleteSession()
+        //performUIUpdatesOnMain {
             //let controller = self.storyboard!.instantiateViewController(withIdentifier: "LoginViewController")
             //self.present(controller, animated: true, completion: nil)
             self.dismiss(animated: true, completion: nil)
-        }
+        //}
     }
     
     @IBAction func btnReload(_ sender: Any) {
