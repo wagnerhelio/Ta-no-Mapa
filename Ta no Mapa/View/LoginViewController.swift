@@ -22,6 +22,8 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         return appDelegate.studentModel
     }
     
+    let  networkManager = UdacityNetworkFunctions()
+    
 //Override
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,17 +80,15 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
             UdacityConstants.ParameterValues.Email = email
             UdacityConstants.ParameterValues.Password = password
         }
-        UdacityAuthentication { (success, error) in
-            performUIUpdatesOnMain {
-                if success {
-                    self.completeLogin()
-                } else {
-                    
-                    self.displayError("Invalid Email or Password please try again")
-                }
+        networkManager.UdacityAuthentication {(success, error) in performUIUpdatesOnMain {
+            if success {
+                self.completeLogin()
+            } else {
+                
+                self.displayError("Invalid Email or Password please try again")
+            }
             }
         }
-        
     }
     
     @IBAction func btnSingin(_ sender: Any) {
